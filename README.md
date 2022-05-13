@@ -1,9 +1,9 @@
-# Fundamentos
+# FUNDAMENTOS
 
 
 
-## Estrutura do Flutter
-### Folders
+## ESTRUTURA DO FLUTTER
+### FOLDERS
 - `android:` proj nativo, o flutter encapsula toda a complexidade
 do nativo, mas por debaixo do pano ele sempre executa o projeto 
 nativo, quando subimos na lajas google/apple subimos o código nativo 

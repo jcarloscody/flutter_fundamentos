@@ -50,5 +50,5 @@ Temos **`3 árvores`**:
       - didChangeDependencies: método que é chamado antes de atualizar qq dependências.
       - build: 
   
-#### Executando funções depois da tela pronta (addPostFrameCallback)
-Às vezes estamos numa situação que queremos executar algo antes mesmo de entrarmos em determinada página, por exemplo, ao indentificarmos determinado dado/informação no initState já navegamos para outra página sem antes criar a página que estamos. Para usarmos deste artifício deveremos usar o método [`addPostFrameCallback`]() 
+### Executando funções depois da tela pronta (addPostFrameCallback)
+Às vezes estamos numa situação que queremos executar algo antes mesmo de entrarmos em determinada página, por exemplo, ao indentificarmos determinado dado/informação no initState já navegamos para outra página sem antes criar a página que estamos. Para usarmos deste artifício deveremos usar o método [`addPostFrameCallback`](https://github.com/jcarloscody/flutter_fundamentos/blob/master/lib/main.dart) 

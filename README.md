@@ -13,3 +13,9 @@
 - ele pode ser interpretado ou compilado
 - `hot reload`: funciona injetando arquivos de código-fonte atualizados na Dart VM em execução. isso não apenas adiciona novas classes , mas também adiciona métodos e campos Às classes existentes e altera as funções existentes.
 - `hot restart` redefine o estado para o estado inicial do aplicativo
+
+#### O que é Widget?
+- tudo no flutter é widget. É uma classe.
+- tipos
+    - `visíveis`: botão por exemplo
+    - `invisíveis`: estrutura o layout por exemplo

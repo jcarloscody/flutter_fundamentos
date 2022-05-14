@@ -44,5 +44,5 @@ O Flutter trabalha com `canais` e este se subdivide em 4 canais que são eles os
 - flutter upgrade
 - flutter upgrade
 - flutter channel nome_canal
-``` 
+```
 

@@ -44,10 +44,9 @@ Temos **`3 árvores`**:
 >    - build
 - **`StatefulWidget`**: esta classe fornece a possibilidade de alterar o estado por meio do método setState e este método irá chamar o build novamente.
 >    - construtor
-
-   - **`createState`**: vai retornar um objeto da **`class State`**, class para a qual é delegada para controlar o estado.
->      - construtor:
->      - initState: é onde podemos carregar os estados caso tenha necessidade. aqui iremos inicializar todos os dados para a tela funcionar. este método não pode ser assíncrono, pode chamar o .then, mas não pode usar o async/await, 
+>    - **`createState`**: vai retornar um objeto da **`class State`**, class para a qual é delegada para controlar o estado.
+>       - construtor:
+>       - initState: é onde podemos carregar os estados caso tenha necessidade. aqui iremos inicializar todos os dados para a tela funcionar. este método não pode ser assíncrono, pode chamar o .then, mas não pode usar o async/await, 
 >      - didChangeDependencies: método que é chamado antes de atualizar qq dependências.
 >      - build: 
 

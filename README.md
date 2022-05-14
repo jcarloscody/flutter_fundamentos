@@ -19,3 +19,34 @@
 - tipos
     - `visíveis`: botão por exemplo
     - `invisíveis`: estrutura o layout por exemplo
+
+
+#### StatelessWidget e StatefulWidget
+- `estado` é tudo aquilo que temos na tela e queremos que mude ou não.
+- `StatelessWidget`: sem estado, componente estático, que não pode haver mudanças. não tem auto alteração.
+- `StatefulWidget`: este tem estado, tem a criação de um estado para o controlar. com isto temos uma class que representa o seu estado, e podemos informar para a class stateful que estamos alterando seu estado por meio do método setState, com este método o objeto desta class será marcado como sujo e no próximo ciclo as mudanças serão refletidas. em suma é quando queremos que haja alguma mudança de estado, usamos o stateful
+    - `initState()`  é chamado apenas 1x no início quando carregamos a nossa tela antes de construir a nossa class. quando rebuldamos não é chamado novamente.
+    
+
+#### Árvore de Componentes
+Temos **`3 árvores`**:
+- `Árvores de widgets:` o componente propriamente dito, widget. Esta árvore é imutável. 
+- `Árvores de elementos:` a estrutura lógia associado ao respectivo componente.
+- `Árvore de renderização:` responsável pelo desenho do componente na tela.
+> Ou seja, o componente widget é referenciado pelo elemento widget e por sua vez é renderizado na tela pelo renderObject.
+> É importante observar que a árvore de **componente é imutável**, mesmo sendo um componente stateless/ful, porém quando alteramos a estrutura lógica, objeto elemento widget e é **marcado como sujo** e isto é informado pelo método setState, a árvore de componente é recriado.
+
+
+#### Ciclo de vida de Stateful/less
+- o ciclo de vida se refere a ordem que alguns métodos são chamados dentro da arquitetura do flutter.
+- **`StatelessWidget`**: 
+    - construtor
+    - build
+- **`StatefulWidget`**: esta classe fornece a possibilidade de alterar o estado por meio do método setState e este método irá chamar o build novamente.
+    - construtor
+    - **`createState`**: vai retornar um objeto da **`class State`**, class para a qual é delegada para controlar o estado.
+      - construtor:
+      - `initState:` é onde podemos carregar os estados caso tenha necessidade. aqui iremos inicializar todos os dados para a tela funcionar. este método não pode ser assíncrono, pode chamar o .then, mas não pode usar o async/await, 
+      - didChangeDependencies: método que é chamado antes de atualizar qq dependências.
+      - build: 
+    - 

@@ -40,15 +40,17 @@ Temos **`3 árvores`**:
 #### Ciclo de vida de Stateful/less
 - o ciclo de vida se refere a ordem que alguns métodos são chamados dentro da arquitetura do flutter.
 - **`StatelessWidget`**: 
-    - construtor
-    - build
+>    - construtor
+>    - build
 - **`StatefulWidget`**: esta classe fornece a possibilidade de alterar o estado por meio do método setState e este método irá chamar o build novamente.
-    - construtor
-    - **`createState`**: vai retornar um objeto da **`class State`**, class para a qual é delegada para controlar o estado.
-      - construtor:
-      - `initState:` é onde podemos carregar os estados caso tenha necessidade. aqui iremos inicializar todos os dados para a tela funcionar. este método não pode ser assíncrono, pode chamar o .then, mas não pode usar o async/await, 
-      - didChangeDependencies: método que é chamado antes de atualizar qq dependências.
-      - build: 
-  
+>    - construtor
+
+   - **`createState`**: vai retornar um objeto da **`class State`**, class para a qual é delegada para controlar o estado.
+>      - construtor:
+>      - initState: é onde podemos carregar os estados caso tenha necessidade. aqui iremos inicializar todos os dados para a tela funcionar. este método não pode ser assíncrono, pode chamar o .then, mas não pode usar o async/await, 
+>      - didChangeDependencies: método que é chamado antes de atualizar qq dependências.
+>      - build: 
+
+
 ### Executando funções depois da tela pronta (addPostFrameCallback)
 Às vezes estamos numa situação que queremos executar algo antes mesmo de entrarmos em determinada página, por exemplo, ao indentificarmos determinado dado/informação no initState já navegamos para outra página sem antes criar a página que estamos. Para usarmos deste artifício deveremos usar o método [`addPostFrameCallback`](https://github.com/jcarloscody/flutter_fundamentos/blob/master/lib/main.dart) 
